@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE configuration PUBLIC
+"-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<settings>
+		<setting name="jdbcTypeForNull" value="NULL" />
+		<setting name="cacheEnabled" value="false" />
+	</settings>
+	
+	<typeAliases>	
+		<typeAlias type="com.project.foodbalance.member.model.vo.Member" alias="Member"/>
+		<typeAlias type="com.project.foodbalance.board.model.vo.Board" alias="Board"/>
+		<typeAlias type="com.project.foodbalance.board.model.vo.Reply" alias="Reply"/>
+		<typeAlias type="com.project.foodbalance.notice.model.vo.Notice" alias="Notice"/>
+		<typeAlias alias="SearchDate" type="com.project.foodbalance.common.SearchDate"/>
+		<typeAlias alias="Paging" type="com.project.foodbalance.common.Paging"/>
+		<typeAlias alias="Train" type="com.project.foodbalance.training.model.vo.Train"/>
+		<typeAlias alias="FoodAi" type="com.project.foodbalance.ai.model.vo.FoodAi"/>
+	</typeAliases>
+	
+	<mappers>
+		<mapper resource="mappers/member-mapper.xml" />
+		<mapper resource="mappers/board-mapper.xml"/>
+		<mapper resource="mappers/reply-mapper.xml"/>
+		<mapper resource="mappers/notice-mapper.xml"/>
+		<mapper resource="mappers/train-mapper.xml"/>
+		<mapper resource="mappers/foodai-mapper.xml"/>
+		<!-- <mapper resource="mappers/manage-mapper.xml"/> -->
+		
+	</mappers>
+</configuration>
